@@ -83,3 +83,38 @@ This project simulates a real-world enterprise network with multiple departments
 | PC (VLAN 10) | 172.16.0.5 | WAN Link | ✅ 0% loss |
 
 ### OSPF Verification
+```
+R-2# show ip ospf neighbor
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+192.168.30.1      1   FULL/DR         00:00:31    172.16.0.2      GigabitEthernet0/0
+172.16.0.9        1   FULL/DR         00:00:36    172.16.0.6      GigabitEthernet0/1
+```
+✅ All neighbors in FULL state
+
+### STP Verification (MLS5)
+```
+MLS5# show spanning-tree summary
+
+Switch is in rapid-pvst mode
+Root bridge for: VLAN0010
+
+Name                   Blocking Listening Learning Forwarding STP Active
+VLAN0010                     4         0        0          4          8
+```
+✅ Rapid-PVST active, Root Bridge elected
+
+---
+
+## 🎯 Skills Demonstrated
+
+Cisco IOS · VLANs · Inter-VLAN Routing · OSPF · ECMP · Rapid-PVST · VLSM · Subnetting · DHCP · DNS · Network Troubleshooting · Packet Tracer
+
+---
+
+## 👤 Author
+
+**Alhussein Abdel Rahman Mohamed**
+IT Support & Network Specialist | CCNA (In Progress)
+📧 Hussein.arm@outlook.com
+📍 Madinah, Saudi Arabia
